@@ -1,0 +1,952 @@
+ 
+Feature Caching is ON
+The workspace may run slower because features are being output and recorded on all output ports regardless of whether or not there is a connection.
+ 
+    Command line to run this workspace:
+        /Library/FME/2024.1/fme "/Users/taylormcwilliam/Desktop/merged_muni .fmw"
+          --SourceDataset_POSTGIS "territory"
+          --SourceDataset_POSTGIS_9 "territory"
+          --SourceDataset_POSTGIS_13 "territory"
+          --SourceDataset_POSTGIS_11 "territory"
+          --SourceDataset_POSTGIS_15 "territory"
+          --SourceDataset_POSTGIS_10 "territory"
+          --SourceDataset_CSV2 "$(FME_MF_DIR)Source Integration/merge_ap_w_muni_ita.csv"
+          --SourceDataset_POSTGIS_12 "geo"
+          --DestDataset_SHAPEFILE_5 "$(FME_MF_DIR)Source Integration"
+          --DestDataset_SHAPEFILE "$(FME_MF_DIR)Source Integration"
+          --DestDataset_CSV2 "$(FME_MF_DIR)Source Integration"
+          --SourceDataset_POSTGIS_14 "geo"
+          --DestDataset_SHAPEFILE_4 "$(FME_MF_DIR)Source Integration"
+          --FME_LAUNCH_VIEWER_APP "YES"
+    
+Starting translation...
+Current FME version: FME 2024.1.1.1 (20240820 - Build 24620 - macosx-aarch64)
+System Time: 20240911161331 UTC
+FME_HOME is '/Library/FME/2024.1/'
+FME Form (floating)
+Permanent License.
+Machine host name is: primaryusers-MacBook-Pro.local
+OS Locale Name     : en_US
+OS Locale Encoding : UTF-8
+Process Encoding   : UTF-8
+FME API version: '4.0 20240212'
+FME Configuration: FME_BASE is 'no'
+FME Configuration: FME_MF_DIR is '/Users/taylormcwilliam/Desktop/'
+FME Configuration: FME_MF_NAME is 'merged_muni .fmw'
+FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2024.1.1.1'
+Operating System: macOS Version 14.2 (Build 23C64)
+FME Platform: macosx-aarch64
+System Status: 119.66 GB of disk space available in the FME temporary folder (/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wbrun_1726071137479_48377/fmetmp_0)
+System Status: 16.00 GB of physical memory available
+System Status: 23.00 GB of virtual memory available
+START - ProcessID: 48458, peak process memory usage: 96400 kB, current process memory usage: 96400 kB
+FME Configuration: Command line arguments are `/Library/FME/2024.1/fme' `/Users/taylormcwilliam/Desktop/wb-xlate-1726071202974_48377' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `56897' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `56869'
+FME Configuration: Connection Storage: '/Users/taylormcwilliam/Library/Caches/Safe Software/FME/'
+Shared folders for formats are : /Library/FME/2024.1/datasources;/Users/taylormcwilliam/Library/Application Support/FME/Formats
+Shared folders for transformers are : /Users/taylormcwilliam/Library/Caches/Safe Software/FME/Packages/24620-macosx-aarch64/transformers;/Library/FME/2024.1/transformers
+Shared folders for coordinate systems are : /Users/taylormcwilliam/Library/Application Support/FME/CoordinateSystems
+Shared folders for coordinate system exceptions are : /Users/taylormcwilliam/Library/Application Support/FME/CoordinateSystemExceptions
+Shared folders for coordinate system grid overrides are : /Users/taylormcwilliam/Library/Application Support/FME/CoordinateSystemGridOverrides
+Shared folders for CS-MAP transformation exceptions are : /Users/taylormcwilliam/Library/Application Support/FME/CsmapTransformationExceptions
+Shared folders for transformer categories are : /Users/taylormcwilliam/Library/Application Support/FME/TransformerCategories
+FME Configuration: Reader Keyword is `MULTI_READER'
+FME Configuration: Writer Keyword is `PRIMARY_DEST'
+FME Configuration: Writer Group Definition Keyword is `PRIMARY_DEST_DEF'
+FME Configuration: Reader type is `MULTI_READER'
+FME Configuration: Writer type is `MULTI_WRITER'
+FME Configuration: No destination coordinate system set
+FME Configuration: Current working folder is `/Users/taylormcwilliam/Desktop'
+FME Configuration: Temporary folder is `/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wbrun_1726071137479_48377/fmetmp_0', set from environment variable `FME_TEMP'
+FME Configuration: Cache folder is '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T'
+FME Configuration: FME_HOME is `/Library/FME/2024.1/'
+FME Configuration: Start freeing memory when the process exceeds 21.83 GB
+FME Configuration: Stop freeing memory when the process is below 16.37 GB
+Creating writer for format: 
+Creating reader for format: 
+MULTI_READER(MULTI_READER): Will fail with first member reader failure
+MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_1
+MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_8
+Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+FME Configuration: Using connection values from 'territory' for POSTGIS_1
+Creating reader for format: PostGIS
+Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+Loaded module 'POSTGIS' from file '/Library/FME/2024.1/plugins/postgis.so'
+FME API version of module 'POSTGIS' matches current internal version (4.0 20240212)
+Opening POSTGIS reader for dataset 'geo'
+PostGIS client encoding: 'UTF8'
+PostgreSQL 13.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+3.1 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+POSTGIS reader: Creating bulk features from individual features
+Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+Writer output will be ordered by value of multi_writer_id
+Loaded module 'LogCount_func' from file '/Library/FME/2024.1/plugins/logcount_func.so'
+FME API version of module 'LogCount_func' matches current internal version (4.0 20240212)
+Loaded module 'AttributeFilterFactory' from file '/Library/FME/2024.1/plugins/attributefilterfactory.so'
+FME API version of module 'AttributeFilterFactory' matches current internal version (4.0 20240212)
+Loaded module 'OGCGeometry_func' from file '/Library/FME/2024.1/plugins/ogcgeometry_func.so'
+FME API version of module 'OGCGeometry_func' matches current internal version (4.0 20240212)
+Loaded module 'StatisticsCalculatorFactory' from file '/Library/FME/2024.1/plugins/statisticscalculatorfactory.so'
+FME API version of module 'StatisticsCalculatorFactory' matches current internal version (4.0 20240212)
+StatisticsCalculator (StatisticsCalculatorFactory): The following statistics will be calculated 'feature_id.total_count'
+StatisticsCalculator_2 (StatisticsCalculatorFactory): The following statistics will be calculated 'feature_id.total_count'
+Executing data query: 'declare "ita_territory_july_2024_territory_crsr" cursor for select "feature_id","iso_country_code","iso_subdivision_code","country_code","country_subdivision_code","feature_type","geo_type_id","geo_ontology_id","territory_code","territory_type","territory_category","render_type_override","vendor_id","vendor_feature_id","vendor_version","unparsed_name","lang","names_arr","territory_language","territory_type_name_id","seat","seat_of","has_locale_list_use","representative_point_type","official_pop","official_pop_year","official_pop_source","legacy_pop","label_min_zoom","label_min_zoom_source","flyover_tour_muid","suppress_display","is_active","latitude","longitude","has_display_bbox","boundary_type","version", ST_AsEWKB("geom") as "geom" from "ita_territory_july_2024"."territory"'
+Reading POSTGIS table: 'ita_territory_july_2024.territory'...
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 90822 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc.fts'
+FFS writer: 60000 of 90822 features written
+FFS writer: 90822 of 90822 features written
+Spatial Index: Adding 90822 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_COUNCIL_AREA Feature Recorder -1 2148007943 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_REGION Feature Recorder -1 2148466695 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6661 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559.fts'
+Spatial Index: Adding 6661 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_1.fts'
+Spatial Index: Adding 100000 features
+AttributeFilter_<UNFILTERED> Feature Recorder -1 2147811335 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 89571 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_1.fts'
+Spatial Index: Adding 89571 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 7885 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_1.fts'
+Spatial Index: Adding 7885 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_2.fts'
+Spatial Index: Adding 100000 features
+AttributeFilter_<UNFILTERED> Feature Recorder -1 2147811335 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 89991 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_2.fts'
+Spatial Index: Adding 89991 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 7768 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_2.fts'
+Spatial Index: Adding 7768 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_3.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 89814 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_3.fts'
+Spatial Index: Adding 89814 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 7990 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_3.fts'
+Spatial Index: Adding 7990 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_4.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 89707 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_4.fts'
+Spatial Index: Adding 89707 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 8048 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_4.fts'
+Spatial Index: Adding 8048 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_5.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 90397 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_5.fts'
+Spatial Index: Adding 90397 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 7348 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_5.fts'
+Spatial Index: Adding 7348 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_6.fts'
+Spatial Index: Adding 100000 features
+AttributeFilter_<UNFILTERED> Feature Recorder -1 2147811335 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 89696 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_6.fts'
+Spatial Index: Adding 89696 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 8071 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_6.fts'
+Spatial Index: Adding 8071 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_7.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 90314 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_7.fts'
+Spatial Index: Adding 90314 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_REGION Feature Recorder -1 2148466695 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 7400 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_7.fts'
+Spatial Index: Adding 7400 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_8.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91292 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_8.fts'
+Spatial Index: Adding 91292 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6412 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_8.fts'
+Spatial Index: Adding 6412 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_9.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91609 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_9.fts'
+Spatial Index: Adding 91609 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 5862 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_9.fts'
+Spatial Index: Adding 5862 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_10.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91536 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_10.fts'
+Spatial Index: Adding 91536 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6044 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_10.fts'
+Spatial Index: Adding 6044 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_11.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91452 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_11.fts'
+Spatial Index: Adding 91452 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6400 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_11.fts'
+Spatial Index: Adding 6400 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_12.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91314 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_12.fts'
+FFS writer: 91314 of 91314 features written
+Spatial Index: Adding 91314 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6438 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_12.fts'
+Spatial Index: Adding 6438 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_13.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 91131 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_13.fts'
+FFS writer: 90000 of 91131 features written
+FFS writer: 91131 of 91131 features written
+Spatial Index: Adding 91131 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6562 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_13.fts'
+Spatial Index: Adding 6562 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_14.fts'
+Spatial Index: Adding 100000 features
+AttributeFilter_<UNFILTERED> Feature Recorder -1 2147811335 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 91680 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_14.fts'
+Spatial Index: Adding 91680 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 6354 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_14.fts'
+Spatial Index: Adding 6354 features
+FFS writer: Writing 96822 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_ita_territory_july_2024.territor -1 2 -1  0  543bc8e538b2a3a44403179f53e5450c00657853_15.fts'
+Spatial Index: Adding 96822 features
+FFS writer: Writing 82076 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 4 ADDRESSABLE_AREA  0  b5818a74230de3c3ee3450ae3db59c9a48e674fc_15.fts'
+Spatial Index: Adding 82076 features
+AttributeFilter_CITY Feature Recorder -1 2147942407 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_DISTRICT Feature Recorder -1 2148073479 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_LOCAL_ADMINISTRATIVE_REGION Feature Recorder -1 2148139015 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_METRO_AREA Feature Recorder -1 2148204551 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Processed 1318 of 1819 features
+AttributeFilter_MUNICIPALITY Feature Recorder -1 2148270087 (RecorderFactory): Processed 1819 of 1819 features
+AttributeFilter_NEIGHBORHOOD Feature Recorder -1 2148335623 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_PROVINCE Feature Recorder -1 2148401159 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_REGION Feature Recorder -1 2148466695 (RecorderFactory): Splitting bulk features into individual features
+AttributeFilter_SUBDISTRICT Feature Recorder -1 2148532231 (RecorderFactory): Splitting bulk features into individual features
+FFS writer: Writing 10612 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter -1 7 fo 15 VILLAGE  0  008c2f3bdec4aa911e3c9f147344898a4d323559_15.fts'
+Spatial Index: Adding 10612 features
+Successfully closed POSTGIS database reader
+Successfully closed POSTGIS database reader
+FME Configuration: Using connection values from 'geo' for POSTGIS_8
+Creating reader for format: PostGIS
+Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+Opening POSTGIS reader for dataset 'geo'
+PostGIS client encoding: 'UTF8'
+PostgreSQL 13.6 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
+3.1 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+POSTGIS reader: Creating bulk features from individual features
+Executing data query: 'declare "jq_ita_sep_2024_address_crsr" cursor for select "feature_id","iso_country_code","iso_subdivision_code","country_code","country_subdivision_code","feature_type","is_active","address_point_type","address_boundary_type","address_type","house_number","road_reference","road_name","post_code_reference","post_code","radius_of_influence","feature_min_zoom","feature_min_zoom_source","geometry_is_approximate","vendor_feature_id","vendor_id","vendor_version","version","rep_lat","rep_lng","geom" from "jq_ita_sep_2024"."address"'
+Reading POSTGIS table: 'jq_ita_sep_2024.address'...
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_1.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_1.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_2.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_2.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_3.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_3.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_4.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_4.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_5.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_5.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_6.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_6.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_7.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_7.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_8.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_8.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_9.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_9.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_10.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_10.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_11.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_11.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_12.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_12.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_13.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_13.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_14.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_14.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_15.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_15.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_16.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_16.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_17.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_17.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_18.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_18.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_19.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_19.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_20.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_20.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_21.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_21.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_22.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_22.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_23.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_23.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_24.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_24.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_25.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_25.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_26.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_26.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_27.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_27.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_28.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_28.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_29.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_29.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_30.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_30.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_31.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_31.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_32.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_32.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_33.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_33.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_34.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_34.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_35.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_35.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_36.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_36.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_37.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_37.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_38.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_38.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_39.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_39.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_40.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_40.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_41.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_41.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_42.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_42.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_43.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_43.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_44.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_44.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_45.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_45.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_46.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_46.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_47.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_47.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_48.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_48.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_49.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_49.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_50.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_50.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_51.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_51.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_52.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_52.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_53.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_53.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_54.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_54.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_55.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_55.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_56.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_56.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_57.fts'
+FFS writer: 90000 of 100000 features written
+FFS writer: 100000 of 100000 features written
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_57.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_58.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_58.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_59.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_59.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 71989 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_60.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_60.fts'
+Spatial Index: Adding 100000 features
+Spatial Index: Added 100000 of 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_61.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_61.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 99561 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_62.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_62.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_63.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_63.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_64.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_64.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_65.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_65.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_66.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_66.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_67.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_67.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_68.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_68.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_69.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_69.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_70.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_70.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 96877 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_71.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_71.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_72.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_72.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_73.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_73.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_74.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_74.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_75.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_75.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_76.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_76.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_77.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_77.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 79261 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_78.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_78.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_79.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_79.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_80.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_80.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_81.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_81.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_82.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_82.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 78727 of 100000 features
+Spatial Index: Adding 100000 features
+Spatial Index: Added 90000 of 100000 features
+Spatial Index: Added 100000 of 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_83.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_83.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 88353 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_84.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_84.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_85.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_85.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_86.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_86.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_87.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_87.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_88.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_88.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_89.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_89.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_90.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_90.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_91.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_91.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_92.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_92.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_93.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_93.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_94.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_94.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_95.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_95.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_96.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_96.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_97.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_97.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_98.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_98.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_99.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_99.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_100.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_100.fts'
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 82462 of 100000 features
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_101.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_101.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_102.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_102.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_103.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_103.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_104.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_104.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_105.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_105.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_106.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_106.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_107.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_107.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_108.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_108.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_109.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_109.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_110.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_110.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_111.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_111.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_112.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_112.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_113.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_113.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_114.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_114.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_115.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_115.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_116.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_116.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_117.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_117.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_118.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_118.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_119.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_119.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_120.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_120.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_121.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_121.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_122.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_122.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_123.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_123.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_124.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_124.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_125.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_125.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_126.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_126.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_127.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_127.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_128.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_128.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_129.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_129.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_130.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_130.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_131.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_131.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_132.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_132.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_133.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_133.fts'
+Spatial Index: Adding 100000 features
+Spatial Index: Added 80000 of 100000 features
+Spatial Index: Added 100000 of 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_134.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_134.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_135.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_135.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_136.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_136.fts'
+Spatial Index: Adding 100000 features
+Spatial Index: Added 50000 of 100000 features
+Spatial Index: Added 100000 of 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_137.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_137.fts'
+Spatial Index: Adding 100000 features
+Spatial Index: Added 100000 of 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_138.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_138.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_139.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_139.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_140.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_140.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_141.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_141.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_142.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_142.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_143.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_143.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_144.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_144.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_145.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_145.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_146.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_146.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_147.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_147.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_148.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_148.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_149.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_149.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_150.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_150.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_151.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_151.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_152.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_152.fts'
+Spatial Index: Adding 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_153.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_153.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_154.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_154.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_155.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_155.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_156.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_156.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_157.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_157.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_158.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_158.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_159.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_159.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_160.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_160.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_161.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_161.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_162.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_162.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_jq_ita_sep_2024.address -1 6 -1  0  4a365258682cacc906ed33d5ba46845cc143839a_163.fts'
+FFS writer: Writing 100000 feature(s) to file '/private/var/folders/s_/bfhxxbh10tq4xttjf_mr52480000gp/T/wb-cache-merged_muni (1)-pIWQEf/Main_AttributeFilter_2 -1 17 fo 4 ITA  0  175a10b301584c9c79c86b5636a4572215a99acc_163.fts'
+Spatial Index: Adding 100000 features
+GeometryReplacer_Rejector (ExecuteFunctionFactory): Processed 100000 of 100000 features
